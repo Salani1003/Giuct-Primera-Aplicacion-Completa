@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 col-lg-3 col-12 mt-2">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"
+            >Nombre:</label
+          >
+        </div>
+        <select
+          class="custom-select"
+          [(ngModel)]="valorInicial"
+          (change)="capturar()"
+        >
+          <option selected value="0">Seleccione uno</option>
+          <option *ngFor="let reunion of reuniones">
+            {{ reunion.nombre }}
+          </option>
+        </select>
+        <button
+          class="btn btn-outline-primary btn-block mt-4"
+          (click)="mostrarPerReunion()"
+        >
+          Consultar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

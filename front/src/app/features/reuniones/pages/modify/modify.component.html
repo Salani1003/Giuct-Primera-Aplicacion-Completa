@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-4 col-lg-4 col-12 mt-3">
+      <form action="" [formGroup]="form" (ngSubmit)="updateReunion()">
+        <div class="form-group">
+          <label for="nombre"> Nombre <Span class="text-danger">*</Span></label>
+          <span class="text-danger"> {{ verifyField("nombre") }}</span>
+          <input
+            autofocus
+            id="Nombre"
+            type="text"
+            class="form-control"
+            formControlName="nombre"
+            placeholder=" Nombre"
+          />
+          <label for="titulo"> Titulo <Span class="text-danger">*</Span></label>
+          <span class="text-danger"> {{ verifyField("titulo") }}</span>
+          <input
+            autofocus
+            id="titulo"
+            type="text"
+            class="form-control"
+            formControlName="titulo"
+            placeholder=" Titulo"
+          />
+          <label for="fecha"> Fecha <Span class="text-danger">*</Span></label>
+          <span class="text-danger"> {{ verifyField("fecha") }}</span>
+          <input
+            autofocus
+            id="titulo"
+            type="date"
+            class="form-control"
+            formControlName="fecha"
+            placeholder=" Fecha"
+          />
+          <label for="ciudad"> Ciudad <Span class="text-danger">*</Span></label>
+          <span class="text-danger"> {{ verifyField("ciudad") }}</span>
+          <input
+            autofocus
+            id="ciudad"
+            type="text"
+            class="form-control"
+            formControlName="ciudad"
+            placeholder=" Ciudad"
+          />
+          <label for="pais"> Pais <Span class="text-danger">*</Span></label>
+          <span class="text-danger"> {{ verifyField("pais") }}</span>
+          <input
+            autofocus
+            id="pais"
+            type="text"
+            class="form-control"
+            formControlName="pais"
+            placeholder=" Pais"
+          />
+          <label for="idTipoReunion">
+            Tipo de Reunion <Span class="text-danger">*</Span></label
+          >
+          <span class="text-danger"> {{ verifyField("idTipoReunion") }}</span>
+          <input
+            autofocus
+            id="idTipoReunion"
+            type="number"
+            pattern="[1-2]"
+            min="1"
+            max="2"
+            class="form-control"
+            formControlName="idTipoReunion"
+          />
+          <span class="font-italic"
+            >Ingrese : <br />
+            1-Internacional <br />
+            2-Nacional<br />
+          </span>
+
+          <button
+            [disabled]="form.invalid"
+            class="btn btn-primary btn-block mt-4"
+          >
+            Ingresar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

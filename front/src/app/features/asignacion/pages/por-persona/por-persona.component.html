@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 col-lg-3 col-12 mt-5" *ngFor="let persona of personas">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ persona.nombrePersona }} {{ persona.apellido }}
+          </h5>
+
+          <p class="card-text">
+            <span class="important"> DNI: </span> {{ persona.dni }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Tipo de reunion: </span> {{ persona.tipo }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Nombre de reunion: </span>
+            {{ persona.nombreReunion }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Titulo de reunion: </span>
+            {{ persona.titulo }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

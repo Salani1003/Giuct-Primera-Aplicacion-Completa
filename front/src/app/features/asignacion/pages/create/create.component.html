@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6 col-lg-6 col-12 mt-3">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"
+            >DNI de la persona:</label
+          >
+        </div>
+        <select
+          class="custom-select"
+          [(ngModel)]="valorInicialPer"
+          (change)="capturar()"
+        >
+          <option selected value="0">Seleccione uno</option>
+          <option *ngFor="let persona of personas">
+            {{ persona.dni }}
+          </option>
+        </select>
+
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"
+            >Nombre de Reunion:</label
+          >
+        </div>
+        <select
+          class="custom-select"
+          [(ngModel)]="valorInicialReu"
+          (change)="capturar()"
+        >
+          <option selected value="0">Seleccione uno</option>
+          <option *ngFor="let reunion of reuniones">
+            {{ reunion.nombre }}
+          </option>
+        </select>
+        <button
+          class="btn btn-outline-primary btn-block mt-4"
+          (click)="asignarReunion()"
+        >
+          Asignar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

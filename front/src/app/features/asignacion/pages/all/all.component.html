@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 col-lg-3 col-12 mt-5" *ngFor="let asig of asignacion">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ asig.nombrePersona }} {{ asig.apellido }}
+          </h5>
+
+          <p class="card-text">
+            <span class="important"> DNI: </span> {{ asig.dni }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Tipo de reunion: </span> {{ asig.tipo }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Nombre de reunion: </span>
+            {{ asig.nombreReunion }}
+          </p>
+          <p class="card-text">
+            <span class="important"> Titulo de reunion: </span>
+            {{ asig.titulo }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

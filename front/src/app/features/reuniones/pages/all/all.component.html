@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center">
+    <div
+      class="col-md-3 col-lg-3 col-12 mt-5"
+      *ngFor="let reunion of reuniones"
+    >
+      <div class="card mb-5">
+        <div class="card-body">
+          <h5 class="card-title">{{ reunion.titulo }}</h5>
+          <h5>{{ reunion.nombre }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ reunion.tipo }}</h6>
+          <p class="card-text">
+            <span class="important">Fecha :</span>
+            {{ reunion.fecha | date: "dd/MM/yyyy" }}
+          </p>
+
+          <a
+            class="btn btn-primary btn-block text-white"
+            routerLink="/reuniones/single/{{ reunion.id }}"
+            >Ver más!</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
